@@ -2,8 +2,8 @@
     'use strict';
 
     const canvas = document.getElementById('theCanvas'), intervalLength = 16.66,// home = document.getElementById('home');
-        homeRightX = 1250, homeRightY = 70, homeRightRadius = 50,
-        homeLeftX = 100, homeLeftY = 70, homeLeftRadius = 50, midCanvas = 675, lengthOfPopUp = 12;// let foodRestPlace = 0;
+        homeRightX = 1250, homeRightY = 170, homeRightRadius = 50,
+        homeLeftX = 100, homeLeftY = 170, homeLeftRadius = 50, midCanvas = 675, lengthOfPopUp = 12;
 
     function resizeCanvas() {
         canvas.width = window.innerWidth;
@@ -63,13 +63,6 @@
             } else if (this.goingHome) {
                 this.x += this.wayHomeX;
                 this.y += this.wayHomeY;
-                // this.x = home.style.left;
-                // this.y = home.style.top;
-                // this.randomX = Ant.getRandomNumber(-homeRadius, homeRadius);
-                // this.randomY = Ant.getRandomNumber(-homeRadius, homeRadius);
-                // if (this.x === (homeX/* + this.randomX*/) && this.y === (homeY/* + this.randomY*/)) {
-                //     this.goingHome = false;
-                // }
             }
             else {
                 this.x += this.specificX;
@@ -103,8 +96,6 @@
                 Ant.ants = Ant.ants.filter(a => a !== this);
             }
         }
-        // goHome() {
-        // }
 
         static getRandomNumber(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
@@ -148,8 +139,8 @@
         constructor(context, color = 'red') {
             this.context = context;
             this.color = color;
-            this.x = Ant.getRandomNumber(10, canvas.width - 10);
-            this.y = Ant.getRandomNumber(10, canvas.width - 10);
+            this.x = Ant.getRandomNumber(150, canvas.width - 170);
+            this.y = Ant.getRandomNumber(100, canvas.width - 250);
             this.isHome = false;
             this.isCleared = false;
             this.draw();
@@ -246,12 +237,10 @@
         context.fill();
         context.beginPath();
         context.arc(homeLeftX, homeLeftY, homeLeftRadius, 0, 2 * Math.PI, true);
-        // context.fillRect(homeX, homeY, 10, 10);
-        // context.beginPath();
-        // context.moveTo(homeX - 20, homeY);
-        // context.lineTo(homeX - 10, homeY);
-        // context.lineTo(homeX, homeY);
-        // context.lineTo(homeX + 15, homeY);
+
+        context.fillStyle = 'purple';
+        context.fillText('LEFT HOME', homeLeftX - 27, homeLeftY - 60);
+        context.fillText('RIGHT HOME', homeRightX - 28, homeRightY - 60);
         context.stroke();
         context.strokeStyle = 'blue';
         context.fillStyle = 'yellow';
