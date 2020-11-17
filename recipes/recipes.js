@@ -2,7 +2,8 @@
     'use strict';
 
     const dName = $('#d-name'), dIng = $('#d-ing');
-    const img = $('img');
+    const results = $('#results');//.hide();
+    const img = $('<img>');
 
     $('button').click(function () {
         showRecipe(this.id);
@@ -26,10 +27,12 @@
                 let name = r[find].name, ing = r[find].ingredients;
                 dName.text(name);
                 dIng.empty();
-                ing.forEach(i => {
-                    dIng.text(`${dIng.text()} ${i}, `);
+                ing.forEach((i, n) => {
+                    let sep = n === ing.length - 1 ? '' : ',';
+                    dIng.text(`${dIng.text()} ${i}${sep} `);
                 });
-                img.prop('src', r[find].url).prop('alt', name).addClass('img').show();
+                //results.show();
+                img.prop('src', r[find].url).prop('alt', name).addClass('img').show().appendTo(results);
             })
             .catch(error => dName.text(error));
     }
