@@ -57,10 +57,10 @@
         next = $('<img src="images/next.png" class="nextPrevious" id="next">')
             .click(function () {
                 if (run >= theCurrentPix.length) {
-                    run = -1;
+                    run = 0;
                 }
                 figure.empty();
-                figure.append(theElements[++run]);
+                figure.append(theElements[run++]);
             });
         previous = $('<img src="images/previous.png" class="nextPrevious" id="previous">')
             .click(() => {

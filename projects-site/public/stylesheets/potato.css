@@ -1,17 +1,19 @@
-body {
+#allPotato {
     width: 100%;
     height: 100%;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr;
-    grid-template-rows: 1fr 5fr 5fr;
-    background-image: url('media/waterfall.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    grid-template-columns: 2fr 3fr 3fr;
+    grid-template-rows: 1fr 7fr 7fr;
+}
+body{
+  background-image: url('/media/waterfall.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #clearStorage{
     position: absolute;
-    top: 100px;
+    top: 110px;
     left: 5px;
     background-color: salmon;
     border: 15px double blue;
@@ -27,7 +29,7 @@ body {
     color: yellow;
 }
 #gameArea1{
-    background-image: url('media/potatoHead.png');
+    background-image: url('/media/potatoHead.png');
     background-repeat: no-repeat;
     background-position: center;
     /* background-size: cover; */
@@ -35,7 +37,7 @@ body {
     grid-column: 2;
 }
 #gameArea2{
-    background-image: url('media/realPotatoHead.png');
+    background-image: url('/media/realPotatoHead.png');
     background-repeat: no-repeat; 
     background-position: center;
     grid-row: 2;
@@ -56,7 +58,7 @@ audio{
   }
 
   header h2,
-  header h3 {
+  header h5 {
     display: inline;
     margin: 20px;
   }

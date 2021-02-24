@@ -1,0 +1,38 @@
+<section id="whole">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <aside>
+        <h2>Contact Information</h2>
+    </aside>
+
+    <main>
+        <h1>please choose from our amazing selection of apps</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="/stock-ticker.html" >Stock Ticker</a></li>
+                <li><a href="/location-weather">Weather</a> </li>
+                <li><a href="/flickr">Flickr Images</a> </li>
+                <li title="Have a Table with all your important Contacts saved in a real Database!">
+                    <a href="/contacts">Contacts</a> </li>
+
+            
+            <div><select id="games">
+                {{!-- <button id="games">Games</button>sty --}}
+                <option value="">Games </option>
+                <option value="/games/ants">Ants</option>
+                <option value="/games/snake">Snake</option>
+                <option value="/games/potato">Potato Head </option>
+                <option value="/games/colorchanger">Color Changer </option>
+                <option value="/games/colorchooser"> Color Chooser </option>
+                <option value="/games/recipes">Recipes</option>
+                <!-- <option><a href="/blog-site/src/index.html">Blog</a> </option> -->
+                {{!-- <option value="/videos/videos.html">Videos </option> --}}
+            </select>
+                    <a id="playGame">Play</a>
+            </div>
+            </ul>
+        </nav>
+    </main>
+</section>
+
+<script src="/javascripts/index.js"></script>

@@ -1,0 +1,60 @@
+#whole{
+    width: 95%;
+    margin: auto;
+    /* background-color: rgb(241, 241, 45); */
+    background-image: linear-gradient(rgb(248, 236, 64), rgb(18, 223, 206),rgb(131, 238, 9));
+    /* background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(73, 18, 223, 0) 70.71%),
+                linear-gradient(127deg, rgba(0,255,0,.8), rgba(58, 235, 58, 0) 70.71%),
+                linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+aside > h2{
+    text-align: center;
+    color: green;
+}
+
+h1{
+    color: blue;
+    font-family: fantasy;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+nav{
+    text-align: center;
+    margin-top: 100px;
+}
+ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+}
+li > a{
+    color: red;
+    font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+li > a:hover{
+    color: blueviolet;
+    font-size: 2rem;
+}
+
+#playGame{
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blueviolet;
+    font-style: italic;
+    font-weight: 900;
+}
+#games{
+    font-family: cursive;
+    background-color: indigo;
+    color: hotpink;
+    font-style: italic;
+    font-weight: 900;
+    padding: 10px;
+}

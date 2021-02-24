@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="/stylesheets/snake.css">
+
+  <!--img id="snakeHead" src="images/snakehead.png"/-->
+  <canvas id="theCanvas"></canvas>
+
+
+  <script src="/javascripts/snake.js"></script>

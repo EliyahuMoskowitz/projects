@@ -1,0 +1,19 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#homeAnchor{
+  color: blue;
+  background-color: lightskyblue;
+  font-size: 1.25rem;
+  font-family: cursive;
+}
+#homeAnchor:hover{
+  color: red;
+  font-style: italic;
+}

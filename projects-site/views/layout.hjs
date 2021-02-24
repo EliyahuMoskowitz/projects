@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>html{background-color: aquamarine;}</style>
+    <title>{{#potato}}Mr. {{/potato}} {{ title }} {{#potato}}Head{{/potato}}</title>
+    {{#potato}}<link href="/media/potato-favicon.png" rel="icon" />{{/potato}}
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h3>{{ title }}</h3>
+    {{#contacts}}<h4 style="color: darkmagenta; font-family: cursive">{{contacts}}</h4>{{/contacts}}
+    {{#noticeOfOther}}<h4 style="color: blue; font-family: Ariel">{{noticeOfOther}}</h4>{{/noticeOfOther}}
+    <!--p>Welcome to {{ title }}</p-->
+    <hr>
+    <a id="homeAnchor" href="/" >HOME</a>
+
+
+    {{> content}}
+
+  </body>
+</html>
